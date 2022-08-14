@@ -5,13 +5,12 @@
         align-items: center;
         justify-content: center;
         
-        padding-top: 21px;
-        padding-bottom: 21px;
-
     @media screen and (max-width: 767px) {
-            display: none;
-    }
-    
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 32px;
+    }    
+
     @media screen and (min-width: 1200px) {
         flex-direction: row;
         padding-top: 5px;
@@ -20,9 +19,6 @@
         gap: 30px;
     }
 
-    &__tel{
-        margin-right: 13px;
-    }
     &__link {
 
         color: var(--title-text-color);
@@ -42,44 +38,73 @@
         }
     }
     
+    &__tel {
+        @media screen and (max-width: 767px) {
+                font-size: 34px;
+            }
+    
+        @media screen and (min-width: 768px) {
+                margin-right: 13px;
+            }
+    }
+
+    &__e-mail{
+        @media screen and (max-width: 767px) {
+                font-size: 24px;
+            }
+    }
+
     &__link:hover,
     &__link:focus {
         color: var(--accent-color);
              }
 
     &__envelope {
-    width: 14px;
-    height: 10px;
-    margin-right: 10px;
-    fill: var(--title-text-color);
-    
-    .contact-nav__link:hover &,
-    .contact-nav__link:focus &{
-            fill: var(--accent-color);
-        }
+        
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 14px;
+        height: 10px;
+        margin-right: 10px;
+        fill: var(--title-text-color);
+    }
 
     @media screen and (min-width: 1200px) {
         margin-right: 10px;  
         width: 16px;
         height: 12px;
+        }
+
+        .contact-nav__link:hover &,
+        .contact-nav__link:focus & {
+            fill: var(--accent-color);
+        }
     }
-            }
     
     &__smartphone {
-    width: 10px;
-    height: 14px;
-    margin-right: 10px;
-    fill: var(--title-text-color);
+    @media screen and (max-width: 768px) {
+            display: none;
+        }
+    @media screen and (min-width: 768px) {
+        width: 10px;
+        height: 14px;
+        margin-right: 10px;
+        fill: var(--title-text-color);
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 10px;
+        height: 16px;
+    }
 
     &__link:hover &,
     &__link:focus & {
             fill: var(--accent-color);
         }
 
-        @media screen and (min-width: 1200px) {
-        margin-right: 10px;
-        height: 16px;
-        }        
     }
     
 }

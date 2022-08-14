@@ -9,11 +9,9 @@
 
     &--accent {
         color: var(--accent-color);
-        // padding-top: 24px;
-        // padding-bottom: 25px;
-        }
+    }
 
-    @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
         font-size: 26px;
         line-height: 1.19;
     }
@@ -29,5 +27,7 @@
     padding-right: 0;
 
 @media screen and (max-width: 780px) {
-    text-align: center;        }
+    text-align: center;     
+   }
+
 }
