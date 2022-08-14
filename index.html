@@ -24,60 +24,40 @@
                 <span class="logo--accent">Web</span>Studio
             </a>
         
-        <button type="button" class="container-nav__menu-button " data-mobile-menu-open aria-controls="container-nav__mobile-menu" aria-expanded="false">
+        <button type="button" class="container-nav__menu-button is-open" aria-controls="container-nav__mobile-menu" aria-expanded="false" data-menu-button>
             <svg class="container-nav__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
-                <use class="container-nav__icon--open" href="./images/icons.svg#menu_40px"></use>
+                <use class="icon--close" href="./images/icons.svg#close-black"></use>
+                <use class="icon--open" href="./images/icons.svg#menu_40px"></use>
             </svg>
         </button>
 
-        <div class="container-nav__mobile-menu is-open" id="container-nav__mobile-menu" data-menu>
-        <button class="container-nav__close-menu" type="button" data-mobile-menu-close>
-            <svg class="container-nav__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
-            <use class="container-nav__icon--close" href="./images/icons.svg#close-black"></use>
-            </svg>
-        </button>
-        <nav class="container-nav__link">
-            <ul class="menu-nav list">
-                <li class="menu-nav__item"><a href="./index.html" class="menu-nav__link menu-nav__link--current">Студія</a></li>       
-                <li class="menu-nav__item"><a href="./portfolio.html" class="menu-nav__link">Портфоліо</a></li>      
-                <li class="menu-nav__item"><a href="#" class="menu-nav__link">Контакти</a></li>   
+        <div class="container-nav__mobile-menu" id="container-nav__mobile-menu" data-menu>
+            <nav class="container-nav__link">
+                <ul class="menu-nav list">
+                    <li class="menu-nav__item"><a href="./index.html" class="menu-nav__link menu-nav__link--current">Студія</a></li>       
+                    <li class="menu-nav__item"><a href="./portfolio.html" class="menu-nav__link">Портфоліо</a></li>      
+                    <li class="menu-nav__item"><a href="#" class="menu-nav__link">Контакти</a></li>   
+                </ul>
+            </nav>
+
+            <ul class="contact-nav list">
+                <li>
+                    <a href="mailto:info@devstudio.com" class="contact-nav__link">
+                        <svg class="contact-nav__envelope">
+                            <use href="./images/icons.svg#envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+380961111111" class="contact-nav__link contact-nav__tel">
+                        <svg class="contact-nav__smartphone">
+                            <use href="./images/icons.svg#smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
             </ul>
-        </nav>
-
-        <ul class="contact-nav list">
-            <li>
-                <a href="mailto:info@devstudio.com" class="contact-nav__link">
-                    <svg class="contact-nav__envelope">
-                        <use href="./images/icons.svg#envelope"></use>
-                    </svg>
-                    info@devstudio.com
-                </a>
-            </li>
-            <li>
-                <a href="tel:+380961111111" class="contact-nav__link contact-nav__tel">
-                    <svg class="contact-nav__smartphone">
-                        <use href="./images/icons.svg#smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a>
-            </li>
-        </ul>
-
-        <!-- <ul class="container-nav__social-list list">
-            <li class="container-nav__social-item">
-                <a class="social-link" href="#">Twitter</a>
-            </li>
-            <li class="container-nav__social-item">
-               <a class="social-link" href="#">Instagram</a> 
-            </li>
-            <li class="container-nav__social-item">
-               <a class="social-link" href="#">Facebook</a> 
-            </li>
-            <li class="container-nav__social-item">
-                <a class="social-link" href="#">LinkedIn</a>
-            </li>
-
-        </ul> -->
         </div>
     </div>
 </header>
@@ -223,7 +203,19 @@
                 <ul class="team-list list">
                     
                     <li class="team-list__item">
-                        <img class="team-list__image" srcset="./images/teamcard1@1x.jpg 1x, ./images/teamcard1@2x.jpg 2x" src="./images/teamcard1@1x.jpg" src="./images/teamcard1.jpg" alt="Ігор Дем'яненко - Product Designer" width="270">
+                        <img class="team-list__image" 
+                        srcset="
+                            ./images/team/teamcard1-270.jpg 270w,
+                            ./images/team/teamcard1-354.jpg 354w,
+                            ./images/team/teamcard1-450.jpg 450w,
+                            ./images/team/teamcard1-540.jpg 540w,
+                            ./images/team/teamcard1-708.jpg 708w,
+                            ./images/team/teamcard1-900.jpg 900w"
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"    
+                        src="./imagesimages/team/teamcard1-450.jpg" 
+                        alt="Ігор Дем'яненко - Product Designer" 
+                        width="450">
+
                         <div class="team-list__card">
                             <h3 class="team-list__name">Ігор Дем'яненко</h3>
                             <p class="section__subtitle team-list__subtitle list">Product Designer</p>
@@ -261,7 +253,19 @@
                     </li>
                     
                     <li class="team-list__item">
-                        <img srcset="./images/teamcard2@1x.jpg 1x, ./images/teamcard2@2x.jpg 2x" src="./images/teamcard2@1x.jpg" alt="Ольга Репина - Frontend Developer" width="270">
+                        <img class="team-list__image" 
+                        srcset="
+                            ./images/team/teamcard2-270.jpg 270w,
+                            ./images/team/teamcard2-354.jpg 354w,
+                            ./images/team/teamcard2-450.jpg 450w,
+                            ./images/team/teamcard2-540.jpg 540w,
+                            ./images/team/teamcard2-708.jpg 708w,
+                            ./images/team/teamcard2-900.jpg 900w"
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" 
+                        src="./imagesimages/team/teamcard2-450.jpg"
+                        alt="Ольга Репина - Frontend Developer" 
+                        width="450">
+
                         <div class="team-list__card">    
                             <h3 class="team-list__name">Ольга Репина</h3>
                             <p class="section__subtitle team-list__subtitle list">Frontend Developer</p>
@@ -299,8 +303,20 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img srcset="./images/teamcard3@1x.jpg 1x, ./images/teamcard3@2x.jpg 2x" src="./images/teamcard3@1x.jpg" alt="Микола Тарасов - Marketing" width="270">
-                        <div class="team-list__card">    
+                        <img class="team-list__image" 
+                        srcset="
+                            ./images/team/teamcard3-270.jpg 270w,
+                            ./images/team/teamcard3-354.jpg 354w,
+                            ./images/team/teamcard3-450.jpg 450w,
+                            ./images/team/teamcard3-540.jpg 540w,
+                            ./images/team/teamcard3-708.jpg 708w,
+                            ./images/team/teamcard3-900.jpg 900w"
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" 
+                        src="./imagesimages/team/teamcard3-450.jpg"
+                        alt="Микола Тарасов - Marketing" 
+                        width="450">
+                        
+                            <div class="team-list__card">    
                             <h3 class="team-list__name">Микола Тарасов</h3>
                             <p class="section__subtitle team-list__subtitle list">Marketing</p>
                             <ul class="social-list list">
@@ -337,8 +353,20 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img srcset="./images/teamcard4@1x.jpg 1x, ./images/teamcard4@2x.jpg 2x" src="./images/teamcard4@1x.jpg" alt="Михайло Єрмаков - UI Designer" width="270">
-                        <div class="team-list__card">    
+                        <img class="team-list__image" 
+                        srcset="
+                            ./images/team/teamcard4-270.jpg 270w,
+                            ./images/team/teamcard4-354.jpg 354w,
+                            ./images/team/teamcard4-450.jpg 450w,
+                            ./images/team/teamcard4-540.jpg 540w,
+                            ./images/team/teamcard4-708.jpg 708w,
+                            ./images/team/teamcard4-900.jpg 900w"
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw" 
+                        src="./imagesimages/team/teamcard4-450.jpg"
+                        alt="Михайло Єрмаков - UI Designer"
+                        width="450">
+                        
+                            <div class="team-list__card">    
                             <h3 class="team-list__name">Михайло Єрмаков</h3>
                             <p class="section__subtitle team-list__subtitle list">UI Designer</p>
                             <ul class="social-list list">
@@ -497,6 +525,24 @@
             </div>
         </div>
     </footer>
+    
+        <!-- <ul class="container-nav__social-list list">
+                                    <li class="container-nav__social-item">
+                                        <a class="social-link" href="#">Twitter</a>
+                                    </li>
+                                    <li class="container-nav__social-item">
+                                       <a class="social-link" href="#">Instagram</a> 
+                                    </li>
+                                    <li class="container-nav__social-item">
+                                       <a class="social-link" href="#">Facebook</a> 
+                                    </li>
+                                    <li class="container-nav__social-item">
+                                        <a class="social-link" href="#">LinkedIn</a>
+                                    </li>
+                        
+                                </ul> -->
+     
+       
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

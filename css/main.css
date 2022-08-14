@@ -64,6 +64,8 @@ img {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .list {
@@ -216,16 +218,34 @@ img {
     display: none;
   }
 }
-@media (min-width: 768px) {
-  .container-nav__close-menu {
+.container-nav__menu-button .icon--open {
+  display: none;
+}
+.container-nav__menu-button.is-open .icon--open {
+  display: block;
+}
+.container-nav__menu-button .icon--close {
+  display: block;
+}
+.container-nav__menu-button.is-open .icon--close {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .container-nav__mobile-menu {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    background-color: var(--primary-background);
+    text-align: center;
+    padding: 48px 40px;
+    z-index: 900;
   }
 }
-.container-nav__icon--close {
-  display: none;
-}
-.container-nav__mobile-menu {
-  display: none;
+.container-nav__mobile-menu.is-open {
+  display: block;
 }
 @media (min-width: 768px) {
   .container-nav__mobile-menu {
@@ -440,15 +460,26 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 85%;
   left: 50%;
   -webkit-transform: scaleX(1) translate(-50%, -50%);
           transform: scaleX(1) translate(-50%, -50%);
-  min-width: 528px;
+  min-width: 450px;
   background-color: var(--primary-background);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    top: 50%;
+    min-width: 528px;
+  }
 }
 .modal__btn {
   display: -webkit-box;
@@ -652,22 +683,32 @@ img {
 }
 
 .form-main {
-  width: 528px;
+  width: 450px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 40px 40px 40px;
+}
+@media screen and (min-width: 1200px) {
+  .form-main {
+    width: 528px;
+  }
 }
 .form-main__title {
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--primary-text-color);
   padding-top: 40px;
   padding-bottom: 12px;
   margin: 0;
+}
+@media screen and (min-width: 1200px) {
+  .form-main__title {
+    line-height: 1.15;
+  }
 }
 .form-main__button {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -724,8 +765,8 @@ img {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
   resize: none;
@@ -792,10 +833,16 @@ img {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__title {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .checkbox__title--link {
   color: var(--accent-color);
