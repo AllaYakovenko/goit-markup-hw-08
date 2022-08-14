@@ -26,24 +26,20 @@
             <span class="logo--accent">Web</span>Studio
         </a>
 
-        <button type="button" class="container-nav__menu-button " data-mobile-menu-open
-            aria-controls="container-nav__mobile-menu" aria-expanded="false">
+        <button type="button" class="container-nav__menu-button is-open" aria-controls="container-nav__mobile-menu"
+            aria-expanded="false" data-menu-button>
             <svg class="container-nav__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
-                <use class="container-nav__icon--open" href="./images/icons.svg#menu_40px"></use>
+                <use class="icon--close" href="./images/icons.svg#close-black"></use>
+                <use class="icon--open" href="./images/icons.svg#menu_40px"></use>
             </svg>
         </button>
 
-        <div class="container-nav__mobile-menu is-open" id="container-nav__mobile-menu" data-menu>
-            <button class="container-nav__close-menu" type="button" data-mobile-menu-close>
-                <svg class="container-nav__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
-                    <use class="container-nav__icon--close" href="./images/icons.svg#close-black"></use>
-                </svg>
-            </button>
+        <div class="container-nav__mobile-menu" id="container-nav__mobile-menu" data-menu>
             <nav class="container-nav__link">
                 <ul class="menu-nav list">
                     <li class="menu-nav__item"><a href="./index.html"
                             class="menu-nav__link">Студія</a></li>
-                    <li class="menu-nav__item"><a href="./portfolio.html" class="menu-nav__link menu-nav__link--current">Портфоліо</a></li>
+                    <li class="menu-nav__item"><a href="./portfolio.html" class="menu-nav__link  menu-nav__link--current">Портфоліо</a></li>
                     <li class="menu-nav__item"><a href="#" class="menu-nav__link">Контакти</a></li>
                 </ul>
             </nav>
@@ -66,22 +62,6 @@
                     </a>
                 </li>
             </ul>
-
-            <!-- <ul class="container-nav__social-list list">
-            <li class="container-nav__social-item">
-                <a class="social-link" href="#">Twitter</a>
-            </li>
-            <li class="container-nav__social-item">
-               <a class="social-link" href="#">Instagram</a> 
-            </li>
-            <li class="container-nav__social-item">
-               <a class="social-link" href="#">Facebook</a> 
-            </li>
-            <li class="container-nav__social-item">
-                <a class="social-link" href="#">LinkedIn</a>
-            </li>
-
-        </ul> -->
         </div>
     </div>
 </header>
