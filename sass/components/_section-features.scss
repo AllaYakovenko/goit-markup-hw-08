@@ -28,6 +28,10 @@
 
     &__item {
 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
         @media screen and (min-width: 768px) {
             width: 354px;
         }
@@ -35,7 +39,14 @@
             width: 270px;
         }
         }
-    
+
+    &__item:last-child {
+
+        @media screen and (max-width: 767px) {
+         margin-bottom: 0;
+        }
+    }
+
     &__image {
             display: flex;
             align-items: center;
